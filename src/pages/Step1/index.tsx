@@ -18,7 +18,7 @@ function Step1() {
 
   function onSubmit(d: any) {
     if (Object.keys(errors).length === 0) {
-      navigate("./about");
+      navigate("./select-days");
     }
   }
   return (
