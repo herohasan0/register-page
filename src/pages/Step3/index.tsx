@@ -8,8 +8,15 @@ import Title from "../../components/Title";
 import MainButton from "../../components/MainButton";
 import Radio from "../../components/CustomRadio";
 
+import { useTranslation } from "react-i18next";
+
 function Step3() {
-  const goals = ["Lose weight", "Build muscle", "Stay healthy"];
+  const { t, i18n } = useTranslation();
+  const goals = [
+    t("STEP_3.GOALS.GOAL_1"),
+    t("STEP_3.GOALS.GOAL_2"),
+    t("STEP_3.GOALS.GOAL_3"),
+  ];
   const navigate = useNavigate();
   const {
     register,
@@ -25,7 +32,7 @@ function Step3() {
   return (
     <form style={{ height: "100%" }}>
       <Flex h="100%" flexDir={"column"} justifyContent={"space-around"}>
-        <Title Text="What is your fitness goal?" />
+        <Title Text={t("STEP_3.TITLE")} />
 
         <RadioGroup>
           <Stack direction="column">
@@ -39,13 +46,13 @@ function Step3() {
 
         <Flex justifyContent={"space-between"}>
           <MainButton
-            title={"Back"}
+            title={t("BUTTON.BACK")}
             disabled={false}
             isBack={true}
             func={() => navigate(-1)}
           />
           <MainButton
-            title={"Next"}
+            title={t("BUTTON.NEXT")}
             disabled={false}
             isBack={false}
             func={handleSubmit(onSubmit)}
