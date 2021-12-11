@@ -12,25 +12,34 @@
     "WEIGHT_ERROR": "Weight is required"
   },
   "STEP_2": {
-    "DAYS": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday"
-    ]
+    "TITLE": "Pick your workout days",
+    "DAYS": {
+      "DAY_1": "Monday",
+      "DAY_2": "Tuesday",
+      "DAY_3": "Wednesday",
+      "DAY_4": "Thursday",
+      "DAY_5": "Friday",
+      "DAY_6": "Saturday",
+      "DAY_7": "Sunday"
+    }
   },
   "STEP_3": {
     "TITLE": "What is your fitness goal?",
-    "GOALS": ["Lose weight", "Build muscle", "Stay healthy"]
+    "GOALS": {
+      "GOAL_1": "Lose weight",
+      "GOAL_2": "Build muscle",
+      "GOAL_3": "Stay healthy"
+    }
   },
   "STEP_4": {
     "TITLE": "Final step. Complete your registration",
     "NAME_PLACEHOLDER": "Name",
+    "NAME_ERROR": "Name is required",
     "SURNAME_PLACEHOLDER": "Surname",
+    "SURNAME_ERROR": "Surname is required",
     "EMAIL_PLACEHOLDER": "E-mail",
-    "PASSWORD_PLACEHOLDER": "Password"
+    "EMAIL_ERROR": "E-mail is required",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "PASSWORD_ERROR": "Password is required"
   }
 }
