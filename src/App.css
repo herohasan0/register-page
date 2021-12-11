@@ -1,0 +1,8 @@
+.App {
+  background-color: #e8e8ff;
+  height: 100vh;
+}
+
+.option:last-child {
+  border-bottom: none;
+}
