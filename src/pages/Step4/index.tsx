@@ -8,7 +8,10 @@ import Title from "../../components/Title";
 import MainButton from "../../components/MainButton";
 import MainInput from "../../components/MainInput";
 
+import { useTranslation } from "react-i18next";
+
 function Step4() {
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const {
     register,
@@ -25,55 +28,55 @@ function Step4() {
   return (
     <form style={{ height: "100%" }}>
       <Flex h="100%" flexDir={"column"} justifyContent={"space-around"}>
-        <Title Text="Final step. Complete your registration" />
+        <Title Text={t("STEP_4.TITLE")} />
 
         <Flex flexDir={"column"}>
           <Flex flexDir={"column"}>
             <MainInput
-              placeholder="Name"
+              placeholder={t("STEP_4.NAME_PLACEHOLDER")}
               label="name"
               register={register}
               required
             />
-            {errors.name && <span>Name is required</span>}
+            {errors.name && <span>{t("STEP_4.NAME_ERROR")}</span>}
 
             <MainInput
-              placeholder="Surname"
+              placeholder={t("STEP_4.SURNAME_PLACEHOLDER")}
               label="surname"
               register={register}
               required
             />
-            {errors.surname && <span>Surname is required</span>}
+            {errors.surname && <span>{t("STEP_4.SURNAME_ERROR")}</span>}
           </Flex>
 
           <Flex flexDir={"column"} marginTop={"47px"}>
             <MainInput
-              placeholder="E-mail"
+              placeholder={t("STEP_4.EMAIL_PLACEHOLDER")}
               label="email"
               register={register}
               required
             />
-            {errors.email && <span>Surname is required</span>}
+            {errors.email && <span>{t("STEP_4.EMAIL_ERROR")}</span>}
 
             <MainInput
-              placeholder="Password"
+              placeholder={t("STEP_4.PASSWORD_PLACEHOLDER")}
               label="password"
               register={register}
               required
             />
-            {errors.password && <span>Surname is required</span>}
+            {errors.password && <span>{t("STEP_4.PASSWORD_ERROR")}</span>}
           </Flex>
         </Flex>
 
         <Flex justifyContent={"space-between"}>
           <MainButton
-            title={"Back"}
+            title={t("BUTTON.BACK")}
             disabled={false}
             isBack={true}
             func={() => navigate(-1)}
           />
           <MainButton
-            title={"Save"}
+            title={t("BUTTON.SAVE")}
             disabled={false}
             isBack={false}
             func={handleSubmit(onSubmit)}
