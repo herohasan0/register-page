@@ -10,7 +10,7 @@ function MainButton({
   title: string;
   disabled: boolean;
   isBack: boolean;
-  func: () => void;
+  func: any;
 }) {
   return (
     <Button
