@@ -1,7 +1,17 @@
 import React from "react";
 import { Input } from "@chakra-ui/react";
 
-function MainInput({ placeholder }: { placeholder: string }) {
+function MainInput({
+  label,
+  register,
+  required,
+  placeholder,
+}: {
+  label: any;
+  register: any;
+  required: any;
+  placeholder: any;
+}) {
   return (
     <Input
       backgroundColor="#F6F8F9"
@@ -9,6 +19,7 @@ function MainInput({ placeholder }: { placeholder: string }) {
       w="375px"
       borderRadius="4px"
       placeholder={placeholder}
+      {...register(label, { required })}
     />
   );
 }
