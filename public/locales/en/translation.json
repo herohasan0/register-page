@@ -1,0 +1,36 @@
+{
+  "BUTTON": {
+    "NEXT": "Next",
+    "BACK": "Back",
+    "SAVE": "Save"
+  },
+  "STEP_1": {
+    "TITLE": "Let’s hear more about you to prepare your personal workout plan",
+    "HEIGHT_PLACEHOLDER": "Your height (cm)",
+    "WEIGHT_PLACEHOLDER": "Your weight (kg)",
+    "HEIGHT_ERROR": "Height is required",
+    "WEIGHT_ERROR": "Weight is required"
+  },
+  "STEP_2": {
+    "DAYS": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ]
+  },
+  "STEP_3": {
+    "TITLE": "What is your fitness goal?",
+    "GOALS": ["Lose weight", "Build muscle", "Stay healthy"]
+  },
+  "STEP_4": {
+    "TITLE": "Final step. Complete your registration",
+    "NAME_PLACEHOLDER": "Name",
+    "SURNAME_PLACEHOLDER": "Surname",
+    "EMAIL_PLACEHOLDER": "E-mail",
+    "PASSWORD_PLACEHOLDER": "Password"
+  }
+}
