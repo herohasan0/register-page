@@ -8,15 +8,19 @@ import Title from "../../components/Title";
 import Option from "../../components/Option";
 import MainButton from "../../components/MainButton";
 
+import { useTranslation } from "react-i18next";
+
 function Step2() {
+  const { t, i18n } = useTranslation();
+
   const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
+    t("STEP_2.DAYS.DAY_1"),
+    t("STEP_2.DAYS.DAY_2"),
+    t("STEP_2.DAYS.DAY_3"),
+    t("STEP_2.DAYS.DAY_4"),
+    t("STEP_2.DAYS.DAY_5"),
+    t("STEP_2.DAYS.DAY_6"),
+    t("STEP_2.DAYS.DAY_7"),
   ];
   const navigate = useNavigate();
   const {
@@ -33,7 +37,7 @@ function Step2() {
   return (
     <form style={{ height: "100%" }}>
       <Flex h="100%" flexDir={"column"} justifyContent={"space-around"}>
-        <Title Text="Pick your workout days" />
+        <Title Text={t("STEP_2.TITLE")} />
         <CheckboxGroup defaultValue={["Sunday", "Friday"]}>
           <HStack as={Flex} flexDir={"column"}>
             {days.map((day) => (
@@ -44,13 +48,13 @@ function Step2() {
 
         <Flex justifyContent={"space-between"}>
           <MainButton
-            title={"Back"}
+            title={t("BUTTON.BACK")}
             disabled={false}
             isBack={true}
             func={() => navigate(-1)}
           />
           <MainButton
-            title={"Next"}
+            title={t("BUTTON.NEXT")}
             disabled={false}
             isBack={false}
             func={handleSubmit(onSubmit)}
