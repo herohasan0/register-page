@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Flex } from "@chakra-ui/react";
 
 function Layout(props: any) {
@@ -7,9 +7,16 @@ function Layout(props: any) {
       <Flex w="50%">
         <img src="./fitness.png" alt="" />
       </Flex>
-      <Flex w="50%" alignItems="center" justifyContent="center">
-        {props.children}
-      </Flex>
+      <Suspense fallback="loading">
+        <Flex
+          w="50%"
+          flexDir={"column"}
+          alignItems="center"
+          justifyContent="center"
+        >
+          {props.children}
+        </Flex>
+      </Suspense>
     </Flex>
   );
 }
