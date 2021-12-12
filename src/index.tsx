@@ -8,6 +8,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
+import "./i18n";
+
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
