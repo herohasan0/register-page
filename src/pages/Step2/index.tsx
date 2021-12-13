@@ -10,7 +10,10 @@ import MainButton from "../../components/MainButton";
 
 import { useTranslation } from "react-i18next";
 
+import { InfoContext } from "../../context/InfoProvider";
+
 function Step2() {
+  const { addInfo } = React.useContext(InfoContext);
   const { t, i18n } = useTranslation();
 
   const days = [
@@ -29,8 +32,9 @@ function Step2() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(d: any) {
+  function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
+      addInfo({ days: value["selected-days"] });
       navigate("./select-goal");
     }
   }
