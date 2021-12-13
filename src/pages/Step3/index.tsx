@@ -10,7 +10,10 @@ import Radio from "../../components/CustomRadio";
 
 import { useTranslation } from "react-i18next";
 
+import { InfoContext } from "../../context/InfoProvider";
+
 function Step3() {
+  const { addInfo } = React.useContext(InfoContext);
   const { t, i18n } = useTranslation();
   const goals = [
     t("STEP_3.GOALS.GOAL_1"),
@@ -24,8 +27,9 @@ function Step3() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(d: any) {
+  function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
+      addInfo({ goal: value.goal });
       navigate("./final");
     }
   }
