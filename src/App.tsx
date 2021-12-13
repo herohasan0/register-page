@@ -7,16 +7,20 @@ import Step2 from "./pages/Step2";
 import Step3 from "./pages/Step3";
 import Step4 from "./pages/Step4";
 
+import InfoProvider from "./context/InfoProvider";
+
 function App() {
   return (
     <>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Step1 />} />
-          <Route path="select-days" element={<Step2 />} />
-          <Route path="select-days/select-goal" element={<Step3 />} />
-          <Route path="select-days/select-goal/final" element={<Step4 />} />
-        </Routes>
+        <InfoProvider>
+          <Routes>
+            <Route path="/" element={<Step1 />} />
+            <Route path="select-days" element={<Step2 />} />
+            <Route path="select-days/select-goal" element={<Step3 />} />
+            <Route path="select-days/select-goal/final" element={<Step4 />} />
+          </Routes>
+        </InfoProvider>
       </Layout>
     </>
   );
