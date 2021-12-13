@@ -11,7 +11,10 @@ import ChangeLng from "../../components/ChangeLng";
 
 import { useTranslation } from "react-i18next";
 
+import { InfoContext } from "../../context/InfoProvider";
+
 function Step1() {
+  const { addInfo } = React.useContext(InfoContext);
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const {
@@ -20,11 +23,13 @@ function Step1() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(d: any) {
+  function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
+      addInfo({ height: value.height, weight: value.weight });
       navigate("./select-days");
     }
   }
+
   return (
     <form style={{ height: "100%" }}>
       <Flex h="100%" flexDir={"column"} justifyContent={"space-around"}>
