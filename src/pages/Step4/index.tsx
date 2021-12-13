@@ -10,7 +10,10 @@ import MainInput from "../../components/MainInput";
 
 import { useTranslation } from "react-i18next";
 
+import { InfoContext } from "../../context/InfoProvider";
+
 function Step4() {
+  const { addInfo } = React.useContext(InfoContext);
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const {
@@ -19,10 +22,11 @@ function Step4() {
     formState: { errors },
   } = useForm();
 
-  function onSubmit(d: any) {
+  function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
-      alert(JSON.stringify(d));
       // navigate("./final");
+      addInfo(value);
+      alert("You are ready!");
     }
   }
   return (
