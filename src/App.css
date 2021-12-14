@@ -6,3 +6,7 @@
 .option:last-child {
   border-bottom: none;
 }
+
+select.language-select {
+  padding-right: 40px;
+}
