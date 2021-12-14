@@ -22,7 +22,7 @@ function ChangeLng() {
       w={"150px"}
     >
       <option value="en">English</option>
-      <option value="de">Germany</option>
+      <option value="ar">Arabic</option>
     </Select>
   );
 }
