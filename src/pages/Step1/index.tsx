@@ -34,7 +34,7 @@ function Step1() {
     <form style={{ height: "100%" }}>
       <Flex h="100%" flexDir={"column"} justifyContent={"space-around"}>
         <Flex flexDir={"column"} alignItems={"center"}>
-          <Title Text="Let’s hear more about you to prepare your personal workout plan" />
+          <Title Text={t("STEP_1.TITLE")} />
           <ChangeLng />
         </Flex>
 
