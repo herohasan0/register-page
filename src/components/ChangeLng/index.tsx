@@ -8,6 +8,13 @@ function ChangeLng() {
 
   useEffect(() => {
     i18n.changeLanguage(lng);
+    if (lng === "ar") {
+      document.getElementsByTagName("html")[0].setAttribute("dir", "rtl");
+      document.getElementsByTagName("html")[0].setAttribute("lang", "ar");
+    } else {
+      document.getElementsByTagName("html")[0].setAttribute("dir", "ltr");
+      document.getElementsByTagName("html")[0].setAttribute("lang", "en");
+    }
   }, [lng]);
 
   return (
@@ -20,6 +27,7 @@ function ChangeLng() {
       size="sm"
       marginTop={"10px"}
       w={"150px"}
+      className="language-select"
     >
       <option value="en">English</option>
       <option value="ar">Arabic</option>
