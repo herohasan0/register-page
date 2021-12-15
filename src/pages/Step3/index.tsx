@@ -30,7 +30,7 @@ function Step3() {
   function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
       addInfo({ goal: value.goal });
-      navigate("./final");
+      navigate("./register");
     }
   }
   return (

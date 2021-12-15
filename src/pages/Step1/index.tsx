@@ -26,7 +26,7 @@ function Step1() {
   function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
       addInfo({ height: value.height, weight: value.weight });
-      navigate("./select-days");
+      navigate("./days");
     }
   }
 

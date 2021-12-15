@@ -35,7 +35,7 @@ function Step2() {
   function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
       addInfo({ days: value["selected-days"] });
-      navigate("./select-goal");
+      navigate("./goal");
     }
   }
   return (

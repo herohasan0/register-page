@@ -16,9 +16,10 @@ function App() {
         <InfoProvider>
           <Routes>
             <Route path="/" element={<Step1 />} />
-            <Route path="select-days" element={<Step2 />} />
-            <Route path="select-days/select-goal" element={<Step3 />} />
-            <Route path="select-days/select-goal/final" element={<Step4 />} />
+            <Route path="days" element={<Step2 />} />
+            <Route path="days/goal" element={<Step3 />} />
+            <Route path="days/goal/register" element={<Step4 />} />
+            <Route path="days/goal/register/complete" element={<Step1 />} />
           </Routes>
         </InfoProvider>
       </Layout>
