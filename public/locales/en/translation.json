@@ -41,5 +41,8 @@
     "EMAIL_ERROR": "E-mail is required",
     "PASSWORD_PLACEHOLDER": "Password",
     "PASSWORD_ERROR": "Password is required"
+  },
+  "STEP_5": {
+    "TITLE": "Congratulations! You created an account."
   }
 }
