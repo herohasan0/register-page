@@ -5,7 +5,7 @@ import Title from "../../components/Title";
 import { useTranslation } from "react-i18next";
 
 function Step5() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <Flex h="100%" flexDir={"column"} justifyContent={"space-around"}>

@@ -14,7 +14,7 @@ import { InfoContext } from "../../context/InfoProvider";
 
 function Step3() {
   const { addInfo } = React.useContext(InfoContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const goals = [
     t("STEP_3.GOALS.GOAL_1"),
     t("STEP_3.GOALS.GOAL_2"),

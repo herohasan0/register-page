@@ -15,7 +15,7 @@ import { InfoContext } from "../../context/InfoProvider";
 
 function Step1() {
   const { addInfo } = React.useContext(InfoContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const {
     register,

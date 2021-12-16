@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Select } from "@chakra-ui/react";
 
 function ChangeLng() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [lng, setLng] = useState("en");
 
   useEffect(() => {

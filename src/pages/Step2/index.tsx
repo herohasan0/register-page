@@ -14,7 +14,7 @@ import { InfoContext } from "../../context/InfoProvider";
 
 function Step2() {
   const { addInfo } = React.useContext(InfoContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const days = [
     t("STEP_2.DAYS.DAY_1"),

@@ -16,7 +16,7 @@ import { addData } from "../../services/firestore";
 
 function Step4() {
   const { info, addInfo } = React.useContext(InfoContext);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
   const {
     register,
