@@ -12,8 +12,10 @@ import { useTranslation } from "react-i18next";
 
 import { InfoContext } from "../../context/InfoProvider";
 
+import { addData } from "../../services/firestore";
+
 function Step4() {
-  const { addInfo } = React.useContext(InfoContext);
+  const { info, addInfo } = React.useContext(InfoContext);
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const {
@@ -24,9 +26,11 @@ function Step4() {
 
   function onSubmit(value: any) {
     if (Object.keys(errors).length === 0) {
-      // navigate("./final");
       addInfo(value);
-      alert("You are ready!");
+
+      addData(info).then((res) => {
+        navigate(`./${res}`);
+      });
     }
   }
   return (
